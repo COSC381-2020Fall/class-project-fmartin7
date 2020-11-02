@@ -5,6 +5,7 @@ import sys
 import json
 
 ix = open_dir("indexdir")
+
 def query(query_str, items_per_page=10, current_page=1):
     with ix.searcher(weighting=scoring.Frequency) as searcher:
         query = QueryParser("description", ix.schema).parse(query_str)
@@ -15,7 +16,7 @@ def query(query_str, items_per_page=10, current_page=1):
         end_index = start_index + items_per_page
 
         for i in range(start_index, min(len(results), end_index)):
-            d = {}
+            d={}
             d['url'] = "https://www.youtube.com/watch?v=%s" % results[i]['id']
             d['title'] = results[i]['title']
             d['description'] = results[i].highlights('description')

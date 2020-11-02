@@ -1,7 +1,6 @@
 import os
 import sys
 import json
-
 from whoosh.index import create_in
 from whoosh.fields import Schema, TEXT, ID
 
