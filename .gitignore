@@ -13,3 +13,7 @@ video_ids.txt
 my_video_ids.txt
 indextdir/
 youtube_data/
+
+test_module.py
+
+__pycache__
