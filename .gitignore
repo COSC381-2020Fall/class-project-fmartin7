@@ -5,15 +5,15 @@
 !.vscode/extensions.json
 *.code-workspace
 
-# Local History for Visual Studio Code
+# Local History for Visual Studio Code#
 .history/
 
 data_for_indexing.json
 video_ids.txt
 my_video_ids.txt
-indextdir/
+indexdir/
 youtube_data/
 
 test_module.py
 
-__pycache__
+__pycache__/*
