@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h2><a href="history">History</a></h2>
+
+<p>Search successfully deleted: {{ id }}</p>
+
+<form action="history">
+    <input type="submit" value="Back">
+</form>
+{% endblock %}

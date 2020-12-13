@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h2><a href="history">History</a></h2>
+<table style="border: 3px solid black; border-collapse: collapse;">
+    <tr style="background-color: black; color: white;">
+        <th colspan="4">Search History</th>
+    </tr>
+    <tr style="background-color:lightgrey;font-size:20px;">
+        <td><b>Topic</b></td>
+        <td><b>Term</b></td>
+        <td><b>Date/Time<b></td>
+        <td></td>
+       
+    </tr>
+    {% for history_item in history_list %}
+    <tr>
+        <td>Kobe Bryant</td>
+        <td>{{ history_item[1] }}</td>
+        <td>{{ history_item[2] }}</td>
+        <td><a id="minor" href="remove_history?id={{ history_item[0] }}">remove</a></td>
+       
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
